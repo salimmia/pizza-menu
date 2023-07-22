@@ -63,7 +63,7 @@ function Header() {
 function Menu() {
   return (
     <div>
-      <h2>Our menu</h2>
+      <h2>Our Menu</h2>
       <Pizza />
       <Pizza />
       <Pizza />
@@ -73,8 +73,10 @@ function Menu() {
 
 function Footer() {
   return (
-    <footer>{new Date().toLocaleTimeString()} We're currently open!</footer>
+    <footer>{new Date().toLocaleTimeString()}. We're currently open!</footer>
   );
+
+  //   return React.createElement("footer", null, "We're currently open!");
 }
 
 function Pizza() {
