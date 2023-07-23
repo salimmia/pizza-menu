@@ -95,16 +95,14 @@ function Menu() {
 
 function Pizza({ pizzaObj }) {
   return (
-    !pizzaObj.soldOut && (
-      <li className="pizza">
-        <img src={pizzaObj.photoName} alt={pizzaObj.name}></img>
-        <div>
-          <h3>{pizzaObj.name}</h3>
-          <p>{pizzaObj.ingredients}</p>
-          <spam>{pizzaObj.price}</spam>
-        </div>
-      </li>
-    )
+    <li className={`pizza ${pizzaObj.soldOut ? "sold-out" : ""}`}>
+      <img src={pizzaObj.photoName} alt={pizzaObj.name}></img>
+      <div>
+        <h3>{pizzaObj.name}</h3>
+        <p>{pizzaObj.ingredients}</p>
+        <spam>{pizzaObj.soldOut ? "SOLD OUT" : pizzaObj.price}</spam>
+      </div>
+    </li>
   );
 }
 
