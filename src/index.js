@@ -88,14 +88,16 @@ function Menu() {
 
 function Pizza(props) {
   return (
-    <li className="pizza">
-      <img src={props.pizzaObj.photoName} alt={props.pizzaObj.name}></img>
-      <div>
-        <h3>{props.pizzaObj.name}</h3>
-        <p>{props.pizzaObj.ingredients}</p>
-        <spam>{props.pizzaObj.price + 3}</spam>
-      </div>
-    </li>
+    !props.pizzaObj.soldOut && (
+      <li className="pizza">
+        <img src={props.pizzaObj.photoName} alt={props.pizzaObj.name}></img>
+        <div>
+          <h3>{props.pizzaObj.name}</h3>
+          <p>{props.pizzaObj.ingredients}</p>
+          <spam>{props.pizzaObj.price}</spam>
+        </div>
+      </li>
+    )
   );
 }
 
